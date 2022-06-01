@@ -16,10 +16,13 @@ This isn't really meant to be a guide, just publishing because at the moment not
  
 5. Modify docker compose and set the save and settings volumes according to step 4 (e.g. `/opt/vrising/settings` and `/opt/vrising/server`)
 
-6. Start the server  
-`sudo docker-compose up -d `
+6. Update `ENV TZ="America/New_York"` in `dockerfile` to [your timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
-Really messy setup but this was the only way I could figure out how to work it lol. Never used Wine before. Hope for a native linux server soon! 
+7. Modify docker compose, set a path for where you want your saves. Set the save and settings directories
+
+8. compose
+sudo docker-compose up -d 
+
 
 # Updating the server
 Before and after updating the server it might be sensible to check the currently running version:  
