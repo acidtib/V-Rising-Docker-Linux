@@ -12,15 +12,11 @@ This isn't really meant to be a guide, just publishing because at the moment not
 
 3. Modify the `ServerGameSettings.json` and `ServerHostSettings.json` to your liking.
 
-4. Move the files in `settings/` to a new location (e.g. `/opt/vrising/settings/`).
- 
-5. Modify docker compose and set the save and settings volumes according to step 4 (e.g. `/opt/vrising/settings` and `/opt/vrising/server`)
+4. Update `ENV TZ="America/New_York"` in `dockerfile` to [your timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
-6. Update `ENV TZ="America/New_York"` in `dockerfile` to [your timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+5. Modify docker compose, set a path for where you want your saves. Set the save and settings directories
 
-7. Modify docker compose, set a path for where you want your saves. Set the save and settings directories
-
-8. compose
+6. Build and Start Container
 sudo docker-compose up -d 
 
 

@@ -1,13 +1,13 @@
 version: "2.1"
 services: 
   vrising:
+    build:
+      context: .
     container_name: vrising-server
-    build: .
-    image: vrising-local:latest
-    volumes:
-      - /opt/vrising/server:/root/.wine/drive_c/users/root/AppData/LocalLow/Stunlock Studios/VRisingServer/Saves
-      - /opt/vrising/settings:/root/.wine/drive_c/users/root/AppData/LocalLow/Stunlock Studios/VRisingServer/Settings/
-    ports:
+    volumes: 
+      - ./data:/root/.wine/drive_c/users/root/AppData/LocalLow/Stunlock Studios/VRisingServer/Saves
+      - ./settings:/root/.wine/drive_c/users/root/AppData/LocalLow/Stunlock Studios/VRisingServer/Settings/
+    ports: 
       - "27015:27015/udp"
       - "27016:27016/udp"
     restart: unless-stopped
