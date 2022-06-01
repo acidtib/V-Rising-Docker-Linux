@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-
+USER root
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV TZ="America/New_York"
 
